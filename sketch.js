@@ -95,12 +95,14 @@ let sndJump,
   sndClick,
   sndGameover,
   sndRespawn,
-  sndPopup;
+  sndPopup,
+  sndPageFlip;
 
 // Win screen assets
 let winImg1 = null;
 let winImg2 = null;
 let winImg3 = null;
+let winImgL3 = null;
 
 function preload() {
   levelData = [];
@@ -190,7 +192,7 @@ function preload() {
     },
   );
   bgImg3 = loadImage(
-    "assets/images/Level3Background.png",
+    "assets/images/Level3Background_NEW.PNG",
     (img) => {
       bgImg3 = img;
     },
@@ -251,6 +253,13 @@ function preload() {
       sndPopup = null;
     },
   );
+  sndPageFlip = loadSound(
+    "assets/sounds/Page Flip.mp3",
+    () => {},
+    () => {
+      sndPageFlip = null;
+    },
+  );
   sndBgMusic3 = loadSound(
     "assets/sounds/Level3_fast_and_distorted (1).mp3",
     () => {},
@@ -292,6 +301,15 @@ function preload() {
     },
     () => {
       winImg3 = null;
+    },
+  );
+  winImgL3 = loadImage(
+    "assets/images/You made it_L3.png",
+    (img) => {
+      winImgL3 = img;
+    },
+    () => {
+      winImgL3 = null;
     },
   );
 }
@@ -505,7 +523,13 @@ function draw() {
       // Kick off pop animation — start at small scale
       if (popupScales[nextSlot] === 0) popupScales[nextSlot] = 0.01;
       visibleSlotCount++;
-      if (sndPopup) {
+      if (levelIndex === 2) {
+        if (sndPageFlip) {
+          sndPageFlip.stop();
+          sndPageFlip.setVolume(0.5);
+          sndPageFlip.play();
+        }
+      } else if (sndPopup) {
         sndPopup.stop();
         sndPopup.setVolume(0.5);
         sndPopup.play();
@@ -684,7 +708,7 @@ function draw() {
     translate(0, tvRect.y - cameraY); // align world top with TV screen top
     world.updatePlatforms(player);
     world.drawWorld(bgImg3);
-    if (showPlayer) player.draw(world.theme.blob, cursorSprites, 1.4);
+    if (showPlayer) player.draw(world.theme.blob, cursorSprites, 1);
     pop();
 
     drawingContext.restore(); // lift clip so HUD renders without restriction
@@ -802,19 +826,29 @@ function drawCompleteScreen() {
   resetMatrix();
   fill(30, 25, 20, 220);
   rect(0, 0, width, height);
-  fill("#FFE8C0");
-  noStroke();
-  textAlign(CENTER, CENTER);
-  textSize(48);
-  text("you made it through.", width / 2, height / 2 - 60);
-  textSize(18);
-  fill(200, 180, 150);
-  text("all of it.", width / 2, height / 2 - 10);
-  textSize(14);
-  fill(160, 140, 120);
-  text("that took everything you had.", width / 2, height / 2 + 30);
-  textSize(13);
-  text("Press R to play again", width / 2, height / 2 + 80);
+
+  if (winImgL3) {
+    let imgW = min(width * 1.1, 1200);
+    let imgH = imgW * (winImgL3.height / winImgL3.width);
+    imageMode(CORNER);
+    noTint();
+    image(winImgL3, width / 2 - imgW / 2, height / 2 - imgH / 2, imgW, imgH);
+  } else {
+    fill("#FFE8C0");
+    noStroke();
+    textAlign(CENTER, CENTER);
+    textSize(48);
+    text("you made it through.", width / 2, height / 2 - 60);
+    textSize(18);
+    fill(200, 180, 150);
+    text("all of it.", width / 2, height / 2 - 10);
+    textSize(14);
+    fill(160, 140, 120);
+    text("that took everything you had.", width / 2, height / 2 + 30);
+    textSize(13);
+    text("Press R to play again", width / 2, height / 2 + 80);
+  }
+
   textAlign(LEFT);
   pop();
 }
