@@ -1,6 +1,6 @@
 ## Project Title
 
-GBDA302 Mid Term Game: **Reverie**
+GBDA302 Final Game: **Reverie**
 
 ---
 
