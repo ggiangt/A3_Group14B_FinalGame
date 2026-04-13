@@ -55,13 +55,12 @@ After the showcase, we identified several areas to improve in our final game:
 ---
 
 ## Assets
-
-
 > - `assets/sound/8-bit-heaven.mp3` (Pixabay) 
 > - `assets/sound/windows-error.mp3` (Pixabay) 
 > - `assets/sound/8-bit-game-over.mp3` (Pixabay) 
 > - `assets/sound/pixel-jump.mp3` (Pixabay) 
-
+> - `assets/sound/fun-with-my-8-bit-game.mp3` (Pixabay) 
+> - `assets/sound/90-bit-Music-Sound-Effect` (Pixabay) 
 ---
 
 ## References
