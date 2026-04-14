@@ -727,12 +727,13 @@ function draw() {
   }
 
   // --- HUD ---
-  push();
-  resetMatrix();
-  drawHearts();
-  drawStressDebug();
-  drawPopups();
-  pop();
+  if (gameState === "playing") {
+    push();
+    resetMatrix();
+    drawHearts();
+    drawPopups();
+    pop();
+  }
 
   // --- SCREENS ---
   if (gameState === "gameover") drawGameOver();
@@ -889,52 +890,6 @@ function drawPopups() {
   imageMode(CORNER);
 }
 
-// TEMPORARY DEBUG: stress gauge top-right — remove when asked
-function drawStressDebug() {
-  push();
-  let stressCap = levelIndex === 0 ? 30 : levelIndex === 1 ? 60 : 100;
-  let barW = 180,
-    barH = 18;
-  const ha = hudArea || { x: 0, y: 0, w: width, h: height };
-  let bx = ha.x + ha.w - barW - 20,
-    by = ha.y + 16;
-
-  noStroke();
-  fill(0, 0, 0, 60);
-  rect(bx, by, barW, barH, 4);
-
-  let fillW = map(stress, 0, stressCap, 0, barW);
-  let col =
-    stress < stressCap * 0.5
-      ? color("#6EC97A")
-      : stress < stressCap * 0.85
-        ? color("#F0C040")
-        : color("#E05050");
-  fill(col);
-  rect(bx, by, fillW, barH, 4);
-
-  stroke(255, 255, 255, 120);
-  strokeWeight(1);
-  noFill();
-  rect(bx, by, barW, barH, 4);
-  noStroke();
-
-  fill(255);
-  textSize(11);
-  textAlign(RIGHT, TOP);
-  text(
-    "stress: " +
-      nf(stress, 1, 1) +
-      "% / " +
-      stressCap +
-      "%  |  popups: " +
-      visibleSlotCount,
-    width - 20,
-    by + barH + 4,
-  );
-  textAlign(LEFT);
-}
-
 function drawStartScreen() {
   push();
   resetMatrix();
@@ -1059,6 +1014,10 @@ function getTVInnerRect() {
 function keyPressed() {
   if (gameState === "start") return; // no keys on start screen
   if (gameState === "rules" && keyCode === ENTER) {
+    if (!levelData[0] || !levelData[1] || !levelData[2]) {
+      console.log("Level data not loaded:", levelData);
+      return;
+    }
     loadLevel(0);
     return;
   }
