@@ -226,7 +226,7 @@ function preload() {
     },
   );
   sndBgMusic2 = loadSound(
-    "assets/sounds/level2_slightly_faster (with distortion).mp3",
+    "assets/sounds/level2_slightly_faster_with_distortion.mp3",
     () => {},
     () => {
       sndBgMusic2 = null;
