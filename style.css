@@ -2,8 +2,51 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: #1a1a2e;
 }
 
 canvas {
   display: block;
+}
+
+#p5_loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a2e;
+  z-index: 9999;
+}
+
+#loading-inner {
+  text-align: center;
+  font-family: Georgia, serif;
+  color: #e8dcc8;
+}
+
+#loading-title {
+  font-size: 3.5rem;
+  letter-spacing: 0.2em;
+  margin: 0 0 1rem;
+  opacity: 0.9;
+}
+
+#loading-sub {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.6;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 1; }
+}
+
+#loading-dots::after {
+  content: '...';
+  display: inline-block;
+  animation: blink 1.2s steps(1, end) infinite;
 }
