@@ -192,7 +192,7 @@ function preload() {
     },
   );
   bgImg3 = loadImage(
-    "assets/images/Level3Background_NEW.png",
+    "assets/images/level3background_new.png",
     (img) => {
       bgImg3 = img;
     },
@@ -254,21 +254,21 @@ function preload() {
     },
   );
   sndPageFlip = loadSound(
-    "assets/sounds/Page Flip.mp3",
+    "assets/sounds/page_flip.mp3",
     () => {},
     () => {
       sndPageFlip = null;
     },
   );
   sndBgMusic3 = loadSound(
-    "assets/sounds/Level3_fast_and_distorted (1).mp3",
+    "assets/sounds/level3_fast_and_distorted_1.mp3",
     () => {},
     () => {
       sndBgMusic3 = null;
     },
   );
   sndClick = loadSound(
-    "assets/sounds/Clicking.mp3",
+    "assets/sounds/clicking.mp3",
     () => {},
     () => {
       sndClick = null;
@@ -304,7 +304,7 @@ function preload() {
     },
   );
   winImgL3 = loadImage(
-    "assets/images/You made it_L3.png",
+    "assets/images/you_made_it_l3.png",
     (img) => {
       winImgL3 = img;
     },
@@ -328,9 +328,6 @@ function setup() {
       cursorSprites[name] = null;
       const paths = [
         "assets/images/cursor_" + name + ".png",
-        "assets/images/cursor_" + name + ".png",
-        "assets/images/Cursor_" + name + ".png",
-        "assets/images/Cursor_" + name + ".png",
       ];
       function tryNext(i) {
         if (i >= paths.length) return;
@@ -352,9 +349,9 @@ function setup() {
       handSprites[name] = null;
       const updatedNames = {
         normal: "hand_regular",
-        fall: "Hand_fall (1)",
-        jumpl: "Hand_jumpl (1)",
-        jumpr: "Hand_jumpr (1)",
+        fall: "hand_fall_1",
+        jumpl: "hand_jumpl_1",
+        jumpr: "hand_jumpr_1",
       };
       const baseName = updatedNames[name] || "hand_" + name;
       const paths = [

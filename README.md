@@ -62,15 +62,15 @@ After the showcase, we identified several areas to improve in our final game:
 > - `assets/images/cursor_jumpl.png` (original artwork)
 > - `assets/images/cursor_jumpr.png` (original artwork)
 > - `assets/images/cursor_normal.png` (original artwork)
-> - `assets/images/Hand_fall (1).png` (original artwork)
+> - `assets/images/hand_fall_1.png` (original artwork)
 > - `assets/images/hand_fall.png` (original artwork)
-> - `assets/images/Hand_jumpl (1).png` (original artwork)
+> - `assets/images/hand_jumpl_1.png` (original artwork)
 > - `assets/images/hand_jumpl.png` (original artwork)
-> - `assets/images/Hand_jumpr (1).png` (original artwork)
+> - `assets/images/hand_jumpr_1.png` (original artwork)
 > - `assets/images/hand_jumpr.png` (original artwork)
-> - `assets/images/Hand_regular.png` (original artwork)
-> - `assets/images/Level3Background_NEW.png` [1, 2, 3, 4 ,5, 6, 7, 8 ,9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 24, 26, 28, 32, 33, 34, 36, 37] (created in Figma, adjusted in Procreate)
-> - `assets/images/Level3Background.png` [1, 2, 3, 4 ,5, 6, 7, 8 ,9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 24, 26, 28, 32, 33, 34, 36, 37] (created in Figma)
+> - `assets/images/hand_regular.png` (original artwork)
+> - `assets/images/level3background_new.png` [1, 2, 3, 4 ,5, 6, 7, 8 ,9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 24, 26, 28, 32, 33, 34, 36, 37] (created in Figma, adjusted in Procreate)
+> - `assets/images/level3background.png` [1, 2, 3, 4 ,5, 6, 7, 8 ,9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21, 22, 24, 26, 28, 32, 33, 34, 36, 37] (created in Figma)
 > - `assets/images/long_popup_1.png` (original artwork)
 > - `assets/images/popup_paper1.png` (original artwork)
 > - `assets/images/popup_paper2.png` (original artwork)
@@ -95,22 +95,22 @@ After the showcase, we identified several areas to improve in our final game:
 > - `assets/images/tall_popup_2.png` (original artwork)
 > - `assets/images/tall_popup_3.png` (original artwork)
 > - `assets/images/tvscreen.png` [35] (adjusted in Procreate)
-> - `assets/images/You made it_L3.png` (original artwork)
+> - `assets/images/you_made_it_l3.png` (original artwork)
 > - `assets/images/youmadeit.png` (original artwork)
 > - `assets/images/youmadeit1.png` (original artwork)
 > - `assets/images/youmadeit2.png` (original artwork)
 
-> - `assets/sound/gameover.mp3` [25]
-> - `assets/sound/jump.mp3` [27]
-> - `assets/sound/level1_sound.mp3`[16]
-> - `assets/sound/Level2_slightly_faster (1).mp3`[29]
-> - `assets/sound/Level2_slightly_faster (with distortion).mp3` [29]
-> - `assets/sound/Level3_fast_and_distorted (1).mp3` [23]
-> - `assets/sound/Level3_mixdown_NEW.wav` (original recording, mixed in Adobe Audition) [23]
-> - `assets/sound/Level3_mixdown.mp3` (original recording, mixed in Adobe Audition) [23]
-> - `assets/sound/Page Flip.mp3` [29]
-> - `assets/sound/popup.mp3` [31]
-> - `assets/sound/respawn.mp3`[30]
+> - `assets/sounds/gameover.mp3` [25]
+> - `assets/sounds/jump.mp3` [27]
+> - `assets/sounds/level1_sound.mp3` [16]
+> - `assets/sounds/level2_slightly_faster_1.mp3` [29]
+> - `assets/sounds/level2_slightly_faster_with_distortion.mp3` [29]
+> - `assets/sounds/level3_fast_and_distorted_1.mp3` [23]
+> - `assets/sounds/level3_mixdown_new.wav` (original recording, mixed in Adobe Audition) [23]
+> - `assets/sounds/level3_mixdown.mp3` (original recording, mixed in Adobe Audition) [23]
+> - `assets/sounds/page_flip.mp3` [29]
+> - `assets/sounds/popup.mp3` [31]
+> - `assets/sounds/respawn.mp3` [30]
 
 ---
 
