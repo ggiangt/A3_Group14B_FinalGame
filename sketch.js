@@ -132,7 +132,7 @@ function preload() {
   for (let i = 0; i < paperNums.length; i++) {
     (function (idx, num) {
       popupImgs.paper[idx] = loadImage(
-        "assets/images/popup_paper" + num + ".PNG",
+        "assets/images/popup_paper" + num + ".png",
         (img) => {
           popupImgs.paper[idx] = img;
         },
@@ -192,7 +192,7 @@ function preload() {
     },
   );
   bgImg3 = loadImage(
-    "assets/images/Level3Background_NEW.PNG",
+    "assets/images/Level3Background_NEW.png",
     (img) => {
       bgImg3 = img;
     },
@@ -327,9 +327,9 @@ function setup() {
     (function (name) {
       cursorSprites[name] = null;
       const paths = [
-        "assets/images/cursor_" + name + ".PNG",
         "assets/images/cursor_" + name + ".png",
-        "assets/images/Cursor_" + name + ".PNG",
+        "assets/images/cursor_" + name + ".png",
+        "assets/images/Cursor_" + name + ".png",
         "assets/images/Cursor_" + name + ".png",
       ];
       function tryNext(i) {
@@ -358,7 +358,7 @@ function setup() {
       };
       const baseName = updatedNames[name] || "hand_" + name;
       const paths = [
-        "assets/images/" + baseName + ".PNG",
+        "assets/images/" + baseName + ".png",
         "assets/images/" + baseName + ".png",
       ];
       function tryNext(i) {
